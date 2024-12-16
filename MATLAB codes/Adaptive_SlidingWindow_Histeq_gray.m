@@ -1,5 +1,5 @@
 %% Read the grayscale image
-image = imread('lena.png');
+image = imread('lowcontrast.jpg');
 image = rgb2gray(image); % Convert to grayscale if it's a color image
 
 image = im2double(image); % Convert to double for computation
