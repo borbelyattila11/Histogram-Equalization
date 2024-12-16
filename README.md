@@ -8,8 +8,6 @@ Histogram equalization is a technique used in image processing to improve the co
 
 The first step is to compute the histogram of the image, which represents the frequency of each pixel intensity.
 
-### Formula:
-
 $$
 H(r_k) = number\ of\ pixels\ with\ intensity\ r_k
 $$
@@ -23,8 +21,6 @@ Where:
 ## 2. Compute the Probability Density Function (PDF)
 
 To normalize the histogram, compute the Probability Density Function (PDF), which represents the relative frequency of each intensity.
-
-### Formula:
 
 $$
 PDF(r_k) = \frac{H(r_k)}{N}
@@ -41,8 +37,6 @@ Where:
 
 Next, compute the cumulative distribution function of the histogram.
 
-### Formula:
-
 $$
 CDF(r_k) = \sum_{i=0}^{k} PDF(r_i)
 $$
@@ -56,8 +50,6 @@ Where:
 ## 4. Map the Intensities
 
 Use the CDF to map the original pixel intensities to the new enhanced intensities. The mapping scales the normalized CDF to the range [0, L-1], where L = 256 for 8-bit images.
-
-### Formula:
 
 $$
 r_k' = round(CDF(r_k) \cdot (L - 1))
