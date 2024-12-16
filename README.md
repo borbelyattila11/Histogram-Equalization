@@ -4,11 +4,11 @@ Histogram equalization is a technique used in image processing to improve the co
 
 ---
 
-## 1. Compute the Histogram
+### 1. Compute the Histogram
 
 The first step is to compute the histogram of the image, which represents the frequency of each pixel intensity.
 
-### Formula:
+#### Formula:
 
 $$
 H(r_k) = number\ of\ pixels\ with\ intensity\ r_k
