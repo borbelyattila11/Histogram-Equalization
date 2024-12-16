@@ -1,5 +1,5 @@
 % Read the color image
-image = imread('lowcontrast_city.jpg'); 
+image = imread('lowcontrast_city.jpg'); % Also: 'underexposed.jpg'
 
 % Get the size of the image
 [rows, cols, channels] = size(image);
