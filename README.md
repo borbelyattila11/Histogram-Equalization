@@ -199,3 +199,5 @@ Where:
 
 To ensure smooth transitions between tiles:
 - The transformations from neighboring tiles are weighted based on their relative positions in the image.
+
+Additionally, Adaptive Histogram Equalization can also be used for Sliding Window cases besides Local.
