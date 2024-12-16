@@ -67,3 +67,14 @@ T(r_k) = round(CDF(r_k) \cdot (L - 1))
 $$
 
 which is derived from the CDF.
+
+---
+## Extension to Colored Images (Channels Together)
+
+To apply histogram equalization on a colored image while treating all channels together:
+
+1. **Flatten All Channels**: Combine the intensities from all three color channels (R, G, B) into a single array to create a unified histogram. This ensures that the same transformation is applied across all channels.
+  
+2. **Perform Histogram Equalization**: Use the steps described above (compute the histogram, normalize to PDF, calculate the CDF, and map intensities) on the combined intensity data.
+  
+3. **Reshape Back to Original Size**: After applying the intensity mapping, reshape the equalized data back to its original dimensions for each channel.
