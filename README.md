@@ -1,6 +1,6 @@
 # Histogram Equalization
 
-Histogram equalization is a technique used in image processing to improve the contrast of an image by redistributing the intensity values of pixels. The goal is to enhance the image's overall contrast, especially in areas with low contrast, by stretching the range of intensity levels.
+Histogram equalization is a technique used in image processing to improve the contrast of an image by redistributing the intensity values of pixels so that they span the full available range of the image's intensity levels more uniformly. The goal is to enhance the image's overall contrast, especially in areas with low contrast, by stretching the range of intensity levels, thus making the image appear more balanced and improving visibility in both dark and bright regions."
 
 <br/><br/>
 
