@@ -16,7 +16,7 @@ $$
 
 Where:
 
-- \( r<sub>k</sub> \) is the intensity value k (for grayscale images, k is between 0 and 255).
+- \( r<sub>k</sub> \) is the intensity value k (for grayscale images, k is between 1 and 256).
 
 <br/><br/>
 
