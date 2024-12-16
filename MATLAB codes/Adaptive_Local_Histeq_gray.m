@@ -1,5 +1,5 @@
 % Read the grayscale image
-image = imread('lena.png');
+image = imread('lowcontrast.jpg');
 image = rgb2gray(image); 
 
 % Get the size of the image
