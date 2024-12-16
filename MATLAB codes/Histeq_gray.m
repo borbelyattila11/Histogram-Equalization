@@ -1,8 +1,6 @@
 % Read the grayscale image
 image = imread('lena.png');
-if size(image, 3) == 3
-    image = rgb2gray(image); 
-end
+image = rgb2gray(image); 
 
 % Get the size of the image
 [rows, cols] = size(image);
