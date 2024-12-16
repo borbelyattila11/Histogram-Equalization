@@ -74,15 +74,13 @@ Where:
 
 Once the transformation function is created, map each pixel intensity in the original image to its new value using the transformation.
 
-### Implementation:
+### Formula:
 
 Each pixel intensity in the input image is replaced using the transformation function T(r<sub>k</sub>), which is derived from the CDF:
 
 $$
 T(r_k) = \text{round}(CDF(r_k) \cdot (L - 1))
 $$
-
-### Formula:
 
 $$
 output(i) = T(r_i)
