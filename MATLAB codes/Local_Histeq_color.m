@@ -1,5 +1,5 @@
 % Read the color image
-image = imread('lena.png'); 
+image = imread('lowcontrast_city.jpg'); 
 
 % Get the size of the image
 [rows, cols, channels] = size(image);
