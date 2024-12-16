@@ -71,7 +71,7 @@ Where:
 Each pixel intensity in the input image is replaced using the transformation function
 
 $$
-T(r_k​) = round(CDF(r_k) \cdot (L - 1))
+T(r_k) = round(CDF(r_k) \cdot (L - 1))
 $$
 
 which is derived from the CDF.
