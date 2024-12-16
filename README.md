@@ -78,3 +78,38 @@ To apply histogram equalization on a colored image while treating all channels t
 2. **Perform Histogram Equalization**: Use the steps described above (compute the histogram, normalize to PDF, calculate the CDF, and map intensities) on the combined intensity data.
   
 3. **Reshape Back to Original Size**: After applying the intensity mapping, reshape the equalized data back to its original dimensions for each channel.
+
+---
+## Local Histogram Equalization
+
+Local histogram equalization improves the contrast of an image by applying histogram equalization to small regions (tiles) of the image, instead of the entire image. This technique is particularly useful in enhancing local details in low-contrast areas without overexposing other regions.
+
+### Steps for Local Histogram Equalization:
+
+1. **Define Local Regions**: The image is divided into small, non-overlapping tiles (e.g., 128x128 pixels), and histogram equalization is applied to each region independently.
+   
+2. **Calculate Local Histogram**: For each tile, compute the histogram of pixel intensities.
+
+3. **Normalize Local Histogram (PDF)**: Normalize the histogram to get the Probability Density Function (PDF) for each tile.
+
+4. **Compute Cumulative Distribution Function (CDF)**: Calculate the CDF of the tile's PDF to capture the cumulative pixel distribution.
+
+5. **Map Intensities**: Map the pixel intensities in each tile using the transformation function derived from the CDF, similar to global histogram equalization.
+
+6. **Reconstruct the Image**: After processing all tiles, combine the equalized tiles to reconstruct the final image.
+
+### Formula for Local Transformation:
+
+Given the CDF of a local tile:
+
+$$
+CDF_{local}(r_k) = \sum_{i=0}^{k} PDF_{local}(r_i)
+$$
+
+The pixel intensities are then mapped by:
+
+$$
+r_k' = round(CDF_{local}(r_k) \cdot (L - 1))
+$$
+
+Where the transformation is applied to each tile independently.
