@@ -154,3 +154,47 @@ Where the transformation is applied to each pixel in the sliding window independ
 ### Key Difference from Local Histogram Equalization:
 - In **local histogram equalization**, each region is processed independently without overlap, while in **sliding window equalization**, the windows overlap by a defined percentage (typically 50%) for smoother transitions between regions.
 
+---
+## Adaptive Histogram Equalization (AHE) and CLAHE (Contrast Limited Adaptive Histogram Equalization)
+
+Adaptive Histogram Equalization (AHE) is an enhancement technique that adjusts the contrast of an image locally by applying histogram equalization in small regions (tiles) of the image. AHE helps improve the visibility of features in different regions of an image, especially in cases where global histogram equalization may fail to highlight fine details.
+
+### CLAHE (Contrast Limited AHE)
+
+CLAHE (Contrast Limited Adaptive Histogram Equalization) is a variation of AHE where the contrast enhancement is limited to avoid over-amplification of noise. This limitation is controlled using a **clip limit**, which defines the maximum allowable histogram bin value in each tile. Excess pixels above this limit are redistributed to prevent noise enhancement.
+
+### Steps for Adaptive Histogram Equalization (AHE) with CLAHE:
+
+1. **Divide the Image into Tiles**: The image is divided into non-overlapping regions (tiles). Each tile will be independently equalized.
+   
+2. **Calculate the Histogram for Each Tile**: For each tile, compute the histogram of pixel intensities.
+
+3. **Normalize the Histogram (PDF)**: Normalize the histogram to form the Probability Density Function (PDF) for each tile.
+
+4. **Clip the Histogram (for CLAHE)**: A clip limit is applied to the PDF. If any bin exceeds the clip limit, the excess is redistributed evenly across all bins.
+
+5. **Compute the CDF (Cumulative Distribution Function)**: Calculate the CDF based on the clipped PDF.
+
+6. **Create the Transformation Function**: The CDF is used to generate a transformation function that maps pixel intensities to new enhanced values.
+
+7. **Interpolate Between Tile Transformations**: After applying CLAHE to each tile, the transformations are interpolated between neighboring tiles to ensure smooth transitions across tile borders.
+
+8. **Apply the Transformation**: The transformation is applied to each pixel in the image using the interpolation results.
+
+### Formula for CLAHE Transformation:
+
+For each tile:
+- Calculate the histogram and normalize it.
+- Apply the clip limit to the PDF, redistribute excess values.
+- Compute the CDF and create the transformation function:
+  $$ T(r_k) = round(CDF_{clipped}(r_k) \cdot (L - 1)) $$
+
+Where:
+- \( r_k \) is the pixel intensity.
+- \( L \) is the number of intensity levels (typically 256 for 8-bit images).
+- \( CDF_{clipped}(r_k) \) is the cumulative distribution function of the clipped histogram.
+
+### Interpolation of Tile Transformations:
+
+To ensure smooth transitions between tiles:
+- The transformations from neighboring tiles are weighted based on their relative positions in the image.
