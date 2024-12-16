@@ -113,3 +113,44 @@ r_k' = round(CDF_{local}(r_k) \cdot (L - 1))
 $$
 
 Where the transformation is applied to each tile independently.
+
+---
+## Sliding Window Histogram Equalization
+
+Sliding window histogram equalization is a variation of local histogram equalization, where the equalization is performed on overlapping regions of the image. This method allows for smoother transitions between neighboring regions and can be effective in enhancing local contrast without creating stark boundaries between tiles.
+
+### Steps for Sliding Window Histogram Equalization:
+
+1. **Define Sliding Window**: A window of fixed size (e.g., 256x256 pixels) is used, and it slides over the image, overlapping by 50% (e.g., a window with a 50% overlap will move half the window size at each step).
+
+2. **Calculate Histogram for Each Window**: For each window, compute the histogram of pixel intensities.
+
+3. **Normalize the Histogram (PDF)**: Normalize the histogram to get the Probability Density Function (PDF) for each window.
+
+4. **Compute Cumulative Distribution Function (CDF)**: Calculate the CDF for the PDF of each window.
+
+5. **Map Intensities**: For each pixel in the window, map the intensity to the new enhanced value using the transformation derived from the CDF.
+
+6. **Apply the Transformation**: The transformation is applied to each pixel in the image, replacing its intensity with the corresponding value from the CDF.
+
+7. **Reconstruct the Image**: The equalized pixel values are stored in the output image.
+
+### Formula for Sliding Window Transformation:
+
+Given the CDF of a sliding window:
+
+$$
+CDF_{window}(r_k) = \sum_{i=0}^{k} PDF_{window}(r_i)
+$$
+
+The pixel intensities are then mapped by:
+
+$$
+r_k' = round(CDF_{window}(r_k) \cdot (L - 1))
+$$
+
+Where the transformation is applied to each pixel in the sliding window independently.
+
+### Key Difference from Local Histogram Equalization:
+- In **local histogram equalization**, each region is processed independently without overlap, while in **sliding window equalization**, the windows overlap by a defined percentage (typically 50%) for smoother transitions between regions.
+
