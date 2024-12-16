@@ -206,25 +206,25 @@ Additionally, Adaptive Histogram Equalization can also be used for Sliding Windo
 # Test cases
 |  |  |
 |---|---|
-| ![Image 1](images/lowcontrast.jpg)  | ![Image 2](images/Global_Histeq_gray.jpg)  |
+| ![Image 1](images/lowcontrast.jpg)  | ![Image 4](images/Global_Histeq_gray.jpg)  |
 | Description for Image 1 | Description for Image 2 |
-| ![Image 3](images/lowcontrast.jpg)  | ![Image 4](images/Local_Histeq_gray.jpg)  |
-| Description for Image 3 | Description for Image 4 |
-| ![Image 3](images/lowcontrast.jpg)  | ![Image 4](images/Local_Histeq_gray.jpg)  |
-| Description for Image 3 | Description for Image 4 |
-| ![Image 3](images/lowcontrast.jpg)  | ![Image 4](images/Local_Histeq_gray.jpg)  |
-| Description for Image 3 | Description for Image 4 |
-| ![Image 3](images/lowcontrast.jpg)  | ![Image 4](images/Local_Histeq_gray.jpg)  |
-| Description for Image 3 | Description for Image 4 |
-| ![Image 3](images/lowcontrast.jpg)  | ![Image 4](images/Local_Histeq_gray.jpg)  |
-| Description for Image 3 | Description for Image 4 |
-| ![Image 3](images/lowcontrast.jpg)  | ![Image 4](images/Local_Histeq_gray.jpg)  |
-| Description for Image 3 | Description for Image 4 |
-| ![Image 3](images/lowcontrast.jpg)  | ![Image 4](images/Local_Histeq_gray.jpg)  |
-| Description for Image 3 | Description for Image 4 |
-| ![Image 3](images/lowcontrast.jpg)  | ![Image 4](images/Local_Histeq_gray.jpg)  |
-| Description for Image 3 | Description for Image 4 |
-| ![Image 3](images/lowcontrast.jpg)  | ![Image 4](images/Local_Histeq_gray.jpg)  |
-| Description for Image 3 | Description for Image 4 |
-| ![Image 3](images/lowcontrast.jpg)  | ![Image 4](images/Local_Histeq_gray.jpg)  |
+| ![Image 1](images/lowcontrast.jpg)  | ![Image 5](images/Local_Histeq_gray.jpg)  |
+| Description for Image 1 | Description for Image 4 |
+| ![Image 1](images/lowcontrast.jpg)  | ![Image 6](images/SlidingWindow_Histeq_gray.jpg)  |
+| Description for Image 1 | Description for Image 4 |
+| ![Image 1](images/lowcontrast.jpg)  | ![Image 7](images/Adaptive_Local_Histeq_gray.jpg)  |
+| Description for Image 1 | Description for Image 4 |
+| ![Image 1](images/lowcontrast.jpg)  | ![Image 8](images/Adaptive_SlidingWindow_Histeq_gray.jpg)  |
+| Description for Image 1 | Description for Image 4 |
+| ![Image 2](images/lowcontrast_city.jpg)  | ![Image 9](images/Global_Histeq_color.jpg)  |
+| Description for Image 2 | Description for Image 4 |
+| ![Image 2](images/lowcontrast_city.jpg)  | ![Image 10](images/Local_Histeq_color.jpg)  |
+| Description for Image 2 | Description for Image 4 |
+| ![Image 2](images/lowcontrast_city.jpg)  | ![Image 11](images/SlidingWindow_Histeq_color.jpg)  |
+| Description for Image 2 | Description for Image 4 |
+| ![Image 2](images/lowcontrast_city.jpg)  | ![Image 12](images/Adaptive_Local_Histeq_color.jpg)  |
+| Description for Image 2 | Description for Image 4 |
+| ![Image 2](images/lowcontrast_city.jpg)  | ![Image 13](images/Adaptive_SlidingWindow_Histeq_color.jpg)  |
+| Description for Image 2 | Description for Image 4 |
+| ![Image 3](images/underexposed.jpg)  | ![Image 14](images/Adaptive_Local_Histeq_color_2.jpg)  |
 | Description for Image 3 | Description for Image 4 |
