@@ -217,6 +217,8 @@ Additionally, Adaptive Histogram Equalization can also be used for Sliding Windo
 | ![Image 1](images/lowcontrast.jpg)  | ![Image 8](images/Adaptive_SlidingWindow_Histeq_gray.jpg)  |
 | Low contrast greyscale image | Adaptive Sliding Window Histogram Equalization |
 
+<br/><br/>
+
 |  |  |
 |---|---|
 | ![Image 2](images/lowcontrast_city.jpg)  | ![Image 9](images/Global_Histeq_color.jpg)  |
@@ -229,6 +231,8 @@ Additionally, Adaptive Histogram Equalization can also be used for Sliding Windo
 | Low contrast color image | Adaptive Local Histogram Equalization |
 | ![Image 2](images/lowcontrast_city.jpg)  | ![Image 13](images/Adaptive_SlidingWindow_Histeq_color.jpg)  |
 | Low contrast color image | Adaptive Sliding Window Histogram Equalization |
+
+<br/><br/>
 
 |  |  |
 |---|---|
