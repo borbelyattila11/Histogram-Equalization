@@ -205,4 +205,9 @@ Additionally, Adaptive Histogram Equalization can also be used for Sliding Windo
 ---
 # Test cases
 
-
+| Image 1 | Image 2 |
+| ------- | ------- |
+| ![Image 1](images/lowcontrast.png)  | ![Image 2](images/Global_Histeq_gray.jpg)  |
+| Description for Image 1 | Description for Image 2 |
+| ![Image 3](images/lowcontrast.png)  | ![Image 4](images/Local_Histeq_gray.jpg)  |
+| Description for Image 3 | Description for Image 4 |
