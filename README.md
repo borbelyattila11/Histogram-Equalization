@@ -68,27 +68,10 @@ Where:
 - r<sub>k</sub>' is the new intensity value for each original intensity \( r<sub>k</sub> \),
 - L is the number of intensity levels (for 8-bit images, L = 256).
 
-<br/><br/>
-
-## 5. Apply the Transformation
-
-Once the transformation function is created, map each pixel intensity in the original image to its new value using the transformation.
-
-### Formula:
-
-Each pixel intensity in the input image is replaced using the transformation function T(r<sub>k</sub>), which is derived from the CDF:
+Each pixel intensity in the input image is replaced using the transformation function
 
 $$
-T(r_k) = \text{round}(CDF(r_k) \cdot (L - 1))
+T(r_k​)=round(CDF(r_k​)⋅(L−1))
 $$
 
-$$
-output(i) = T(r_i)
-$$
-
-Where:
-
-- ( r<sub>i</sub> ) is the original intensity of the i-th pixel,
-- ( output<sub>i</sub> ) is the transformed intensity of the i-th pixel.
-
----
+which is derived from the CDF.
