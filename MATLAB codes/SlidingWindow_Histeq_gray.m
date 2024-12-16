@@ -1,5 +1,5 @@
 %% Read the grayscale image
-image = imread('lena.png');
+image = imread('lowcontrast.jpg');
 if size(image, 3) == 3
     image = rgb2gray(image); 
 end
