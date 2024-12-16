@@ -16,6 +16,7 @@ Where:
 
 - \( r<sub>k</sub> \) is the intensity value k (for grayscale images, k is between 0 and 255).
 
+
 ## 2. Compute the Cumulative Distribution Function (CDF)
 
 Next, we compute the cumulative distribution function of the histogram to get a mapping function for pixel intensity values.
@@ -30,7 +31,6 @@ Where:
 
 - CDF(r<sub>k</sub>) \) is the cumulative sum of the histogram values from intensity 0 to k.
 
----
 
 ## 3. Normalize the CDF
 
@@ -48,7 +48,6 @@ Where:
 - N is the total number of pixels in the image,
 - L is the number of intensity levels (for 8-bit images, \( L = 256 \)).
 
----
 
 ## 4. Map the Intensities
 
@@ -64,4 +63,3 @@ Where:
 
 - r<sub>k</sub>' is the new intensity value for each original intensity r<sub>k</sub>.
 
----
