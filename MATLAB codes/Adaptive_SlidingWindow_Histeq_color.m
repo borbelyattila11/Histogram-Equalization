@@ -1,5 +1,5 @@
 % Read the color image
-image = imread('lena.png');
+image = imread('lowcontrast_city.jpg');
 
 % Convert image to double for computation
 image = im2double(image);
