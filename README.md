@@ -187,12 +187,13 @@ For each tile:
 - Calculate the histogram and normalize it.
 - Apply the clip limit to the PDF, redistribute excess values.
 - Compute the CDF and create the transformation function:
-  $$ T(r_k) = round(CDF_{clipped}(r_k) \cdot (L - 1)) $$
+
+$$ T(r_k) = round(CDF_{clipped}(r_k) \cdot (L - 1)) $$
 
 Where:
-- \( r_k \) is the pixel intensity.
-- \( L \) is the number of intensity levels (typically 256 for 8-bit images).
-- \( CDF_{clipped}(r_k) \) is the cumulative distribution function of the clipped histogram.
+- r<sub>k</sub> is the pixel intensity.
+- L is the number of intensity levels (typically 256 for 8-bit images).
+- CDF<sub>{clipped}</sub>(r<sub>k</sub>) is the cumulative distribution function of the clipped histogram.
 
 ### Interpolation of Tile Transformations:
 
