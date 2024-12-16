@@ -193,7 +193,7 @@ $$ T(r_k) = round(CDF_{clipped}(r_k) \cdot (L - 1)) $$
 Where:
 - r<sub>k</sub> is the pixel intensity.
 - L is the number of intensity levels (typically 256 for 8-bit images).
-- CDF<sub>{clipped}</sub>(r<sub>k</sub>) is the cumulative distribution function of the clipped histogram.
+- CDF<sub>clipped</sub>(r<sub>k</sub>) is the cumulative distribution function of the clipped histogram.
 
 ### Interpolation of Tile Transformations:
 
